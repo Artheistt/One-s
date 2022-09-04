@@ -1,0 +1,652 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+/* SPLASH SCREEN */
+.intro {
+	position: fixed;
+	z-index: 116;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgb(26, 26, 26);
+	transition: 1s;
+
+}
+
+.red {
+	position: fixed;
+	z-index: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 120vh;
+	transition: 1s;
+	background-color: #D82148;
+}
+
+.logo-header {
+	position: absolute;
+	top:40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+
+.logo {
+    font-size: 58px;
+	position: relative;
+	display: inline-block;
+	bottom: -20%;
+	opacity: 0;
+
+}
+
+.logo.active {
+	bottom: 0;
+	opacity: 1;
+	transition: ease-in-out 0.5s;
+}
+
+.logo.fade{
+	bottom: 150px;
+	opacity: 0;
+	transition: ease-in-out 0.5s;
+}
+/* =============================== */
+
+header {
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(25, 25, 25);
+    display: flex;
+    justify-content: space-between;
+}
+
+.logos {
+    margin: 20px 40px;
+    z-index: 113;
+}
+
+.logos a {
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+    font-size: 38px;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    transition: 1s;
+    background-image: url("/img/9.png");
+    background-color: rgb(26, 26, 26);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    transform: translateY(-110%);
+    opacity: 0.9;
+    z-index: 11;
+}
+
+nav.slide {
+    transition: 1s;
+    transform: translateY(0%);
+}
+
+nav,
+ul li a {
+    display: flex;
+    align-items: center;
+    line-height: 60px;
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    padding: 0 20px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 28px;
+    margin: 20px 40px;
+    z-index: 102;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 103;
+}
+
+.menu-toggle span {
+    display: block;
+    border-radius: 3px;
+    height: 3px;
+    width: 28px;
+    background-color: #fff;
+    transition: all 0.5s;
+
+}
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(2px, 2.5px);
+    background-color: rgb(255, 255, 255);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(1px, -1px);
+    background-color: rgb(252, 252, 252);
+}
+
+/* AKHIR NAVBAR */
+
+/* HOME-PAGE */
+.container-home {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(26, 26, 26);
+
+}
+
+.home-page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-page h1 {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 100px;
+}
+
+.home-page p {
+    color: #fff;
+    font-size: 25px;
+}
+
+/* ANIMATION BOX ROTATE */
+.animation-area {
+    font-family: 'Padauk', sans-serif;
+    width: 100%;
+}
+
+.box-area {
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.box-area li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    animation: animate 20s linear infinite;
+    bottom: -200px;
+}
+
+.box-area li:nth-child(1) {
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.box-area li:nth-child(2) {
+    left: 12%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+}
+
+.box-area li:nth-child(3) {
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    animation-delay: 5.5s;
+}
+
+.box-area li:nth-child(4) {
+    left: 55%;
+    width: 120px;
+    height: 120px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.box-area li:nth-child(5) {
+    left: 55%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 3.5s;
+}
+
+.box-area li:nth-child(6) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 3.5s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(1000);
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.box-area li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li h2 {
+    color: black;
+}
+
+/* AKHIR HOME PAGE */
+
+/* ABOUT */
+.container-about {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(26, 26, 26);
+    position: relative;
+    padding-top:5em;
+}
+
+.about-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding:0 20%;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 10%;
+}
+
+.desc p {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.desc a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 20px;
+}
+
+.profile {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.profile img {
+    width: 300px;
+    height: 450px;
+}
+
+.profile-img {
+    display: flex;
+    position: relative;
+}
+
+.profile-img p {
+    position: absolute;
+    right: -2em;
+    top: 4em;
+    transform: rotate(-89deg);
+    color: black;
+    font-size: 18px;
+}
+
+@media only screen and (max-width:768px) {
+    .about-page {
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+
+    .desc {
+        width: 60%;
+    }
+
+    .desc p {
+        font-size: 20px;
+    }
+
+    .desc a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 10px;
+    }
+
+    .profile {
+        width: 100%;
+    }
+
+    .profile img {
+        width: 250px;
+        height: 330px;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .about-page {
+        padding: 10%;
+    }
+
+    .desc p {
+        font-size: 30px;
+    }
+}
+
+/* SKILL PAGE  */
+.container-skill {
+    width: 100%;
+    height: 120vh;
+    background-color: rgb(26, 26, 26);
+    padding-top:15em;
+}
+
+.text-section {
+    font-family: 'Nanum Myeongjo', serif;
+    text-align: center;
+    color: #fff;
+    font-size: 38px;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5em;
+ 
+}
+
+.skill-item h1 {
+    font-family: 'Nanum Myeongjo', serif;
+    color: #fff;
+    font-size: 38px;
+}
+
+.language-icons {
+    color: #fff;
+    font-size: 8em;
+    padding-top: 2rem;
+}
+
+@media only screen and (max-width:768px) {
+    .skill {
+        margin: 10%;
+        flex-direction: column;
+         padding-top: 2em;
+    }
+    .text-section {
+        font-size: 30px;
+    }
+    .skill-item h1 {
+        width: 50%;
+        font-size: 25px;
+    }
+    .language-icons {
+        font-size: 3em;
+    }
+}
+
+/* PROJECT-PAGE */
+.container-project {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.container-project h1 {
+    font-family: 'Nanum Myeongjo', serif;
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.project-page {
+    width: 100%;
+    columns: 4;
+    column-gap: 15px;
+    padding: 15px;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+@media only screen and (max-width:768px) {
+    .project-page {
+        columns: 3;
+    }
+}
+
+/* CONTACT-PAGE */ 
+.container-contact {
+    position: relative;
+    width: 100%;
+    height: 150vh;
+    background-color: rgb(26, 26, 26);
+}
+.contact-title  {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 4em;
+}
+.contact-title h1 {
+    font-family: 'Nanum Myeongjo', serif;
+    color: #fff;
+    font-size: 30px;
+}
+
+.contact-title p {
+    font-family: 'Nanum Myeongjo', serif;
+    color: #fff;
+    font-size: 40px;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+.contact-field {
+    background-color: #fff;
+    width: 40%;
+    height: 100%;
+    padding: 2em;
+}
+
+.contact-field h3 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 30px;
+}
+
+fieldset {
+    border: none;
+
+}
+
+.contact-field input {
+    padding: 1em;
+    width: 100%;
+    margin: 20px 0 20px 0;
+    border:none ;
+    border-bottom: 1px solid rgb(26, 26, 26);
+
+}
+
+.contact-field textarea {
+    width: 100%;
+    padding: 1em;
+    border:none ;
+    border-bottom: 1px solid rgb(26, 26, 26);
+}
+
+
+.social-box {
+    background-color: #fff;
+    width: 40%;
+    padding: 2em;
+}
+
+.social-box h3 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 30px;
+}
+
+.social-box p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 28px;
+    color: rgb(105, 105, 105);
+}
+
+.social-field {
+    margin-top: 2em;
+}
+
+.social-item img {
+    width: 3em;
+}
+@media only screen and (max-width:768px) {
+    .contact-form {
+        flex-direction: column;
+    }
+    .contact-title p {
+        font-size: 35px;
+    }
+    .contact-form {
+        align-items: center;
+    }
+    .contact-field {
+        width: 100%;
+    }
+    .social-box {
+        width: 100%;
+    }
+    .social-box h3 {
+        font-size: 20px;
+    }
+    .social-box p {
+        font-size: 25px;
+    }
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    display: flex;
+    background-color: rgb(26, 26, 26);
+    justify-content: center;
+}
+
+.footer p {
+    padding: 1em;
+    color: #fff;
+}
+ 
+/* SCROLL-DOWN */
+.scroll {
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+}
+
+.scroll-down {
+    text-decoration: none;
+    display:grid;
+    color:#ffffff;
+}
+
+.bounce {
+    font-weight: 800;
+    animation: Bounce 3s ease infinite;
+}
+
+@keyframes Bounce {
+    0%,100% {
+        transform:translatey(0) rotate(-89deg);
+
+    }
+    50% {
+        transform:translatey(50px) rotate(-89deg);
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .scroll {
+        right: -10%;
+    }
+    .scroll-down {
+        color: #000000;
+    }
+
+}

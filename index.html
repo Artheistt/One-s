@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rid(One)</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<!-- SPLASH SCREEN -->
+	<!-- <div class="intro">
+		<h1 class="logo-header">
+			<span class="logo">One</span>
+			<span class="logo">'s</span>
+		</h1>
+	</div>
+	<div class="red"></div>
+	<script src="app.js"></script> -->
+	<!-- HEADER -->
+	<header>
+		<div class="logos">
+			<a href="#">One's</a>
+		</div>
+		<!-- NAVBAR -->
+		<div class="menu-toggle">
+			<input type="checkbox" id="check" onclick="dropDown()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#about-page">About</a></li>
+				<li><a href="#skill-page">Skill</a></li>
+				<li><a href="#project-page">Project</a></li>
+				<li><a href="#contact-page">Contact</a></li>
+			</ul>
+		</nav>
+		<script>
+			const menuToggle = document.querySelector('.menu-toggle input');
+			const nav = document.querySelector('nav');
+
+			menuToggle.addEventListener('click', function () {
+				nav.classList.toggle('slide');
+			})
+		</script>
+	</header>
+	<!-- AKHIR HEADER -->
+
+	<!-- HOME PAGE -->
+	<section class="container-home">
+		<div class="home-page">
+			<h1>Hello!</h1>
+			<p>Just a simple portfolio</p>
+			<!-- ANIMATION BOX ROTATE -->
+			<ul class="box-area">
+				<li>
+					<h2>Hai</h2>
+				</li>
+				<li>
+					<h2>Namaste</h2>
+				</li>
+				<li>
+					<h2>Hi</h2>
+				</li>
+				<li>
+					<h2>
+						Bonjour</h2>
+				</li>
+				<li>
+					<h2>
+						Szia</h2>
+				</li>
+				<li>
+					<h2>Hola</h2>
+				</li>
+			</ul>
+			<div class="animation-area"></div>
+		</div>
+	</section>
+
+	<!-- ABOUT PAGE -->
+	<section class="container-about" id="about-page">
+		<div class="about-page">
+			<div class="desc">
+				<p>One's is ready to help you in the field of Front end web developer</p>
+				<a href="">Download CV</a>
+			</div>
+			<div class="profile">
+				<div class="profile-img">
+					<img src="/profile/1.jpeg" alt="">
+					<p>Ridwan (One's)</p>
+				</div>
+
+				<p>Tech Enthusiast | Front end web developer</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- SKILL PAGE -->
+	<section class="container-skill" id="skill-page">
+		<h1 class="text-section">What can i do ?</h1>
+		<div class="skill">
+			<div class="skill-item">
+				<h1>Front End</h1>
+				<div class="language-icons">
+					<i class="devicon-html5-plain"></i>
+					<i class="devicon-css3-plain"></i>
+					<i class="devicon-javascript-plain"></i>
+					<i class="devicon-react-original"></i>
+				</div>
+			</div>
+
+			<div class="skill-item">
+				<h1>Back End</h1>
+				<div class="language-icons">
+					<i class="devicon-laravel-plain"></i>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- PROJECT PAGE -->
+	<section class="container-project" id="project-page">
+		<h1>See our Project</h1>
+		<p>Project masih kosong : (</p>
+		<div class="project-page">
+			<a href=""><img src="/img/profile.jpeg" alt=""></a>
+			<a href=""><img src="/img/a14.jpg" alt=""></a>
+			<a href=""><img src="/img/a7.jpg" alt=""></a>
+			<a href=""><img src="/img/a3.jpg" alt=""></a>
+			<a href=""><img src="/img/a4.jpg" alt=""></a>
+			<a href=""><img src="/img/a12.jpg" alt=""></a>
+			<a href=""><img src="/img/a11.jpg" alt=""></a>
+			<a href=""><img src="/img/a13.jpg" alt=""></a>
+			<a href=""><img src="/img/a8.jpg" alt=""></a>
+			<a href=""><img src="/img/a9.jpg" alt=""></a>
+		</div>
+	</section>
+
+	<!-- CONTACT PAGE -->
+	<section class="container-contact">
+		<div class="scroll">
+			<a href="#" class="scroll-down"><span class="bounce"><p>SCROLL UP <span class="titik-merah"> ></span></p></span></a>
+		</div>
+		<div class="contact-page"  id="contact-page">
+			<div class="contact-title">
+				<h1>Contact us</h1>
+				<p>Lets work together</p>
+			</div>
+
+			<div class="contact-form">
+				<div class="contact-field">
+					<h3>Send me a message</h3>
+					<form action="">
+						<fieldset>
+							<div class="form-field">
+								<input type="text" name="" id="" placeholder="Your Name">
+							</div>
+							<div class="form-field">
+								<input type="email" name="" id="" placeholder="Your Email">
+							</div>
+							<div class="form-field">
+								<input type="text" name="" id="" placeholder="Subject">
+							</div>
+							<div class="form-field">
+								<textarea name="" id="" placeholder="Your Message"></textarea>
+							</div>
+						</fieldset>
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+
+				<div class="social-box">
+					<h3>Email Me At</h3>
+					<p>mr004bot5@gmail.com</p>
+
+					<div class="social-field">
+						<h3>Find Me On</h3>
+						<div class="social-item">
+							<a href=""><img src="/social/ifb.svg" alt=""></a>
+							<a href=""><img src="/social/igithub.svg" alt=""></a>
+							<a href=""><img src="/social/iinsta.svg" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="footer">
+		<p>Made by Ridwan(One's)</p>
+	</section>
+	<!-- AOS -->
+	<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script> -->
+</body>
+
+</html>
